@@ -1,0 +1,1325 @@
+/* Importing Google Fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+/* Reset styles */
+/* Fonts */
+:root {
+  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Roboto",  sans-serif;
+  --nav-font: "Poppins",  sans-serif;
+}
+
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #FFFFF0; /* Background color for the entire website, including individual sections */
+  --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #feb900; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+.light-background {
+  --background-color: #f4f7f6;
+  --surface-color: #ffffff;
+}
+
+.dark-background {
+  --background-color: #2c2c2c; /* Warna latar belakang gelap yang sedikit lebih pekat */
+  --default-color: #e0e0e0; /* Warna teks yang terang namun tetap nyaman dibaca */
+  --heading-color: #f1f1f1; /* Warna judul yang cerah untuk kontras */
+  --surface-color: rgba(0, 0, 0, 0.7); /* Warna permukaan lebih gelap dengan transparansi lebih rendah */
+  --contrast-color: #f1f1f1; /* Warna kontras yang cerah untuk teks */
+}
+
+body {
+  color: var(--default-color);
+  background-color: #FFFFF0;
+  font-family: var(--default-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--default-font);
+}
+/*--------------------------------------------------------------
+# Global Sections
+--------------------------------------------------------------*/
+section,
+.section {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  padding: 60px 0;
+  scroll-margin-top: 92px;
+  overflow: clip;
+}
+
+@media (max-width: 1199px) {
+
+  section,
+  .section {
+    scroll-margin-top: 76px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 1px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  position: relative;
+}
+
+.section-title h2:before,
+.section-title h2:after {
+  content: "";
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+  display: inline-block;
+}
+
+.section-title h2:before {
+  margin: 0 15px 10px 0;
+}
+
+.section-title h2:after {
+  margin: 0 0 10px 15px;
+}
+
+.section-title p {
+  margin-bottom: 0;
+  font-family: var(--default-font);
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.welcome {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+}
+
+.welcome .info {
+  position: relative;
+  inset: 0;
+  z-index: 3;
+  padding: 140px 0 60px 0;
+  
+}
+
+@media (max-width: 768px),
+(max-height: 480px) {
+  .welcome .info {
+    padding: 100px 50px 60px 50px;
+  }
+}
+
+
+.welcome .info h2 {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  font-size: 48px;
+  font-weight: 700;
+  position: relative;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.welcome .info h1 {
+  color: #F4BC40;
+}
+
+.welcome .info h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: #F4BC40;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .welcome .info h2 {
+    font-size: 36px;
+  }
+}
+
+.welcome .info p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 18px;
+  font-family: "Poppins", serif;
+}
+
+.info-yellow {
+  color: #F4BC40;
+}
+.welcome .info .btn-get-started {
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid var(--accent-color);
+}
+
+.welcome .info .btn-get-started:hover {
+  background: var(--accent-color);
+}
+
+.welcome .carousel {
+  inset: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.welcome .carousel-item {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  transition-duration: 0.4s;
+  /* opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+ */
+}
+/* .welcome .carousel-item.active {
+  opacity: 1;
+  position: relative;
+  z-index: 3;
+} */
+
+.welcome .carousel-item img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.welcome .carousel-item::before {
+  content: "";
+  background-color: color-mix(in srgb, var(--background-color), transparent 20%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.welcome .carousel-control-prev {
+  justify-content: start;
+}
+
+@media (min-width: 640px) {
+  .welcome .carousel-control-prev {
+    padding-left: 15px;
+  }
+}
+
+.welcome .carousel-control-next {
+  justify-content: end;
+}
+
+@media (min-width: 640px) {
+  .welcome .carousel-control-next {
+    padding-right: 15px;
+  }
+}
+
+.welcome .carousel-control-next-icon,
+.welcome .carousel-control-prev-icon {
+  background: none;
+  font-size: 26px;
+  line-height: 0;
+  background: color-mix(in srgb, var(--default-color), transparent 80%);
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  border-radius: 50px;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome .carousel-control-prev,
+.welcome .carousel-control-next {
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.welcome .carousel-control-prev:focus,
+.welcome .carousel-control-next:focus {
+  opacity: 0.5;
+}
+
+.welcome .carousel-control-prev:hover,
+.welcome .carousel-control-next:hover {
+  opacity: 0.9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+};
+
+
+/*--------------------------------------------------------------
+# program Section
+--------------------------------------------------------------*/
+.program {
+  padding-bottom: 4%;
+  padding-top: 7%;
+  background-color: #FFFFF0; /* Warna latar belakang */
+  background-size: cover; /* Membuat gambar menutupi seluruh elemen */
+  background-position: center; /* Menempatkan gambar di tengah elemen */
+  background-repeat: no-repeat; /* Mencegah gambar untuk diulang */
+}
+
+@media (min-width: 991px) {
+  .program .inner-title {
+    max-width: 65%;
+    margin: 0 0 80px 0;
+  }
+}
+
+.program .our-story {
+  padding: 20px; /* Memberikan padding yang lebih jelas */
+  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  border-radius: 8px; /* Memberikan sudut membulat pada latar belakang */
+  font-size: 17px;
+  color: #6c757d;
+  font-family: var(--nav-font);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk efek depth */
+}
+
+.program .our-story p {
+  margin-bottom: 15px; /* Jarak antar paragraf */
+}
+
+.program .our-story ul {
+  padding-left: 20px; /* Mengatur indentasi untuk daftar */
+  margin-top: 10px;
+}
+
+.program .our-story ul li {
+  margin-bottom: 10px; /* Jarak antar item daftar */
+  display: flex;
+  align-items: center; /* Membuat ikon sejajar dengan teks */
+}
+
+.program .our-story ul li i {
+  margin-right: 8px; /* Jarak ikon dengan teks */
+}
+
+.program .our-story ul li span {
+  font-weight: 500; /* Menonjolkan teks kategori */
+}
+
+
+.program .title h2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--default-font);
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  text-align: center;
+}
+
+.program .title h2:before,
+.program .title h2:after {
+  content: "";
+  width: 70px;
+  height: 3px;
+  background: var(--accent-color);
+  display: inline-block;
+}
+
+@media (min-width: 991px) {
+  .program .our-story {
+    padding-right: 10%;
+  }
+}
+
+.table .a0-row {
+  font-weight: bold; /* Membuat teks menjadi tebal */
+  background-color: #FFB3B3!important;
+}
+
+.table .a0-row:hover {
+  background-color:  #F28B8B !important;/* Tetap merah muda saat di-hover */
+}
+
+.program ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.program ul li {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+}
+
+.program ul i {
+  font-size: 1.25rem;
+  margin-right: 0.5rem;
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
+
+.program .program-img {
+  min-height: 400px;
+  position: relative;
+}
+
+@media (min-width: 992px) {
+  .program .program-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-height: 500px;
+  }
+}
+
+.program .program-img img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+/*--------------------------------------------------------------
+# Kategori Section
+--------------------------------------------------------------*/
+
+/* Styling untuk bagian kategori */
+.kategori {
+  padding: 30px;
+  background-color: #FFFFF0;
+  font-family: var(--default-font);
+  padding-bottom: 8%;
+  padding-top: 3%;
+}
+
+.kategori .section-title {
+  text-align: center;
+  margin-bottom: 0px;
+  padding-bottom: 0%;
+  padding-top: 0%;
+}
+
+.kategori h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: var(--default-font);
+
+}
+
+.kategori p {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 2px;
+  font-family: var(--default-font);
+}
+
+/* Styling untuk setiap card kategori */
+.kategori-card {
+  border: 10px solid #ddd; /* Menambahkan batas tipis */
+  border-radius: 10px; /* Sudut melengkung pada card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan bayangan ringan */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animasi saat hover */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Membuat card memiliki tinggi penuh */
+}
+
+.kategori-card:hover {
+  transform: scale(1.05); /* Memperbesar card sedikit saat hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Memperbesar bayangan saat hover */
+}
+
+.kategori-card .card-img-top {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+  height: 200px; /* Menetapkan tinggi gambar */
+}
+
+.kategori-card .card-body {
+  padding: 20px;
+  flex-grow: 1; /* Membuat body card tumbuh dan memanfaatkan ruang yang tersisa */
+}
+
+.kategori-card .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.kategori-card .card-text {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  text-align: center;
+  color:#6c757d;
+  font-family: var(--nav-font);
+}
+
+/* Styling untuk tombol pada kategori */
+.kategori-card .btn {
+  color: black;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid var(--accent-color);
+  text-align: center;
+  background-color: transparent; /* Tombol berwarna transparan */
+}
+
+.kategori-card .btn:hover {
+  background: var(--accent-color); /* Saat di-hover, tombol berubah menjadi warna kuning */
+  color: white; /* Mengubah warna teks menjadi putih saat hover */
+}
+
+/* Pengaturan layout untuk kolom card */
+@media (min-width: 576px) {
+  .kategori .row-cols-md-5 .col {
+      display: flex;
+      justify-content: center;
+  }
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* BUTTON-DEFAULT */
+.btn:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+/* NAVBAR-DEFAULT */
+.navigation_bar {
+  /* Media Queries for different screen sizes */
+  @media (min-width: 992px) {
+    .navscroll.scrolled {
+      background-color: #121212 !important;
+      transition: background-color 400ms linear;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .navscroll {
+      background-color: #121212 !important;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .navscroll {
+      background-color: #121212 !important;
+    }
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-light .navbar-toggler {
+    border-color: transparent !important;
+  }
+
+  .navbar-nav .nav-link {
+    color: #ffffff !important; /* Warna teks default */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi halus */
+    font-family: var(--nav-font)
+  }
+
+  .navbar-brand img {
+    max-height: 50px;
+  }
+
+  /* Responsif untuk tampilan navbar collapse */
+  .navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Ketika navbar link dalam keadaan aktif */
+  .nav-link.active-text {
+    color: #F4BC40 !important; /* Warna teks kuning saat aktif */
+    background-color: transparent !important; /* Tidak ada perubahan background */
+  }
+
+  /* Hover pada navbar link */
+  .nav-link:hover {
+    background-color: #F4BC40;
+    color: #fff; /* Teks putih saat hover */
+  }
+
+  /* Penyesuaian untuk tampilan navbar yang lebih baik */
+  .navbar-nav .nav-item {
+    margin-left: 15px;
+  }
+
+  /* Style for the dropdown button */
+/* Style for the dropdown button */
+.dropbtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white; /* Change the color of the icon */
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0; /* Remove extra padding */
+}
+
+/* Adjust the user icon size */
+.user-icon {
+  font-size: 1.5rem;
+  color: white; /* White color for the user icon */
+  margin-right: 5px; /* Small space between the icon and caret */
+}
+
+/* Style for the caret (dropdown arrow) */
+.dropbtn .fa-caret-down {
+  font-size: 1rem;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the button */
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+/* Dropdown item style */
+.dropdown-content a {
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show the dropdown when it's open */
+.nav-item.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Hover style for items */
+.dropdown-content a:hover {
+  background-color: #f4bc40;
+  color: white;
+}
+
+/* Adding a small triangle (caret) to the dropdown */
+.nav-item.dropdown:hover .dropbtn .fa-caret-down {
+  transform: rotate(180deg); /* Rotate the caret on hover */
+}
+
+/* Show the logout item below the icon */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position below the button */
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.nav-item.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Make sure the navbar items are aligned vertically */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+}
+
+/* Fix any spacing issues */
+.navbar-nav .nav-item + .nav-item {
+  margin-left: 20px;
+}
+
+/* Prevent overlap of dropdown items */
+.nav-item.dropdown {
+  position: relative;
+}
+
+
+}
+
+.footer {
+  background-color:  #EEEDF2;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer strong {
+  font-weight: bold;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Jarak antar elemen (teks dan logo) */
+}
+
+.footer-logo {
+  display: inline-block;
+}
+
+.footer-logo img {
+  max-width: 100px; 
+  height: auto; 
+  display: block;
+  margin: 0;
+}
+
+
+/* VARIABLES & MIXINS */
+:root {
+  --orange: #ff4c00;
+  --white: #ffffff;
+}
+
+
+.hdrcolor {
+  color: #F4BC40;
+}
+
+.btn_all{
+  color: black;
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 40px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid var(--accent-color);
+  text-align: center;
+  background-color: transparent; /* Tombol berwarna transparan */
+}
+
+.btn_all:hover {
+  background: var(--accent-color); /* Saat di-hover, tombol berubah menjadi warna kuning */
+  color: white; /* Mengubah warna teks menjadi putih saat hover */
+}
+.box_border {
+  border: solid 1px #ececec !important;
+  height: 100%; /* Or a fixed value like 300px */
+  
+}
+
+.sec_bg {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.secondary_header {
+  height: 400px;
+  width: 100%;
+}
+
+.sec_hdr {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://i.pinimg.com/736x/b4/2a/7e/b42a7e3ad5a40b89ea79c86bcbf093a6.jpg");
+}
+/* Styling untuk teks dalam h2 (judul utama) */
+.hdrcolor {
+  color: #ffffff; /* Warna teks putih */
+  font-size: 2.5rem; /* Ukuran font besar */
+  font-weight: 600; /* Menebalkan teks */
+  text-transform: uppercase; /* Mengubah teks menjadi kapital semua */
+  margin-bottom: 10px; /* Memberikan jarak bawah agar tidak terlalu rapat dengan deskripsi */
+}
+
+/* Styling untuk teks deskripsi dalam h5 */
+.text-white {
+  color: #d3d3d3; /* Warna teks abu-abu terang */
+  font-size: 1.2rem; /* Ukuran font deskripsi sedikit lebih kecil */
+  font-weight: 300; /* Membuat teks lebih ringan */
+  text-align: center; /* Menjaga teks tetap terpusat */
+}
+
+/* Memberikan efek pada teks deskripsi untuk mempercantik */
+.lead {
+  font-style: italic; /* Menambahkan gaya miring pada teks */
+  letter-spacing: 0.5px; /* Menambahkan jarak antar huruf */
+  line-height: 1.6; /* Mengatur jarak antar baris */
+}
+
+/* Menambahkan padding kiri dan kanan untuk teks */
+.px-4 {
+  padding-left: 1.5rem; 
+  padding-right: 1.5rem;
+}
+
+/* Responsif untuk teks pada layar kecil */
+@media (max-width: 768px) {
+  .hdrcolor {
+    font-size: 2rem; /* Ukuran font lebih kecil pada layar kecil */
+  }
+
+  .lead {
+    font-size: 1rem; /* Ukuran font deskripsi lebih kecil pada layar kecil */
+  }
+}
+
+/* HOME PAGE */
+.sec_1 {
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url("https://i.pinimg.com/736x/be/39/ca/be39ca936a0bb293f89b9f9e96003c3e.jpg");
+  background-size: cover;
+  background-position: center;
+
+  /* Tambahkan overlay */
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna hitam dengan transparansi 50% */
+    z-index: 1; /* Pastikan overlay berada di atas background */
+  }
+
+  .header_height {
+    height: 100vh;
+    position: relative;
+    z-index: 2; /* Konten berada di atas overlay */
+  }
+}
+
+
+.bg-light {
+  visibility: visible !important;
+  display: block !important;
+  opacity: 1 !important;
+  height: auto !important;
+}
+
+
+.box_border {
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 15px;
+}
+
+
+.sec_2 {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.brands_logo div {
+  max-width: 150px !important;
+}
+
+
+/* Gaya Tabel Modern */
+
+
+
+.alternatif {
+  background-color: #ececec;
+  
+}
+
+.alternatif .button {
+  padding-bottom: 2%;
+
+}
+.kriteria {
+  background-color: #ececec;
+  
+}
+
+.evaluasi {
+  background-color: #ececec;
+  
+}
+
+.evaluasi .section-title {
+  padding-top: 5px;
+}
+
+/* Gaya untuk judul tabel */
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/*tabel matriks */
+.matrix-table {
+  margin:  auto;
+  border-spacing: 20px ;
+  border-collapse: collapse;
+}
+
+.matrix-table td {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* login */
+
+/* Halaman utama */
+.login-page {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #FFFFF0;
+}
+
+/* Bagian gambar */
+.login-image {
+  flex: 1; /* Mengambil setengah halaman */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 10%; /* Memberikan ruang di sekitar gambar */
+}
+
+
+
+/* Bagian form */
+.login-form-container {
+  flex: 1; /* Mengambil setengah halaman */
+  background-color: #FFFFF0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Header */
+.form-header {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Mengurangi jarak bawah */
+}
+
+.form-header .logo {
+  width: 200px; /* Ukuran logo lebih kecil agar proporsional */
+  height: auto;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.form-header h3 {
+  font-size: 25px;
+  font-family: var(--nav-font);
+  font-weight: bold;
+  color:#555;
+  margin: 0; /* Menghapus margin default */
+  line-height: 1.4; /* Memberikan ruang antar baris */
+
+}
+
+/* Form */
+.login-form {
+  background-color: #ffffff; /* Background putih */
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.login-form h3 {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-family: var(--default-font);
+}
+
+.input-group {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-login {
+  width: 100%;
+  padding: 0.75rem;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #555;
+}
+
+/* Footer dalam form */
+.form-footer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.form-footer a {
+  color: #333;
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+.link-register {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.link-register:hover {
+  color: darkblue;
+}
+
+/* Gaya umum untuk tabel */
+/* Gaya umum untuk tabel */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 40px 0;
+  font-size: 16px;
+  color: #333; /* Warna teks gelap */
+}
+
+/* Gaya untuk header tabel */
+.table thead tr {
+  background-color: #FFF4D1;/* Kuning soft untuk header */
+  border-bottom: 2px solid #e0e0e0; /* Garis bawah putih untuk kontras */
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0; /* Warna border soft dan netral */
+}
+
+/* Gaya untuk kolom header */
+.table th {
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  color: #555; /* Warna teks netral untuk header */
+  text-align: center;
+}
+
+/* Gaya untuk baris tabel (striped) */
+.table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* Putih untuk baris ganjil */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f1f1f1; /* Abu-abu muda untuk baris genap */
+}
+
+/* Gaya hover untuk baris tabel */
+.table tbody tr:hover {
+  background-color: #e0e0e0; /* Warna abu-abu sedikit lebih gelap saat hover */
+  transition: background-color 0.3s ease-in-out; /* Efek transisi */
+}
+
+/* Gaya untuk kolom pertama (misalnya No, Nama Desa Wisata) */
+.table td:first-child, 
+.table th:first-child {
+  text-align: left; /* Kolom pertama rata kiri */
+}
+
+/* Gaya untuk tombol aksi */
+.table .btn {
+  font-size: 14px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.table .btn-warning {
+  background-color: #ffc107; /* Kuning standar untuk tombol warning */
+  color: #fff;
+}
+
+.table .btn-warning:hover {
+  background-color: #e0a800; /* Kuning lebih gelap saat hover */
+}
+
+.table .btn-danger {
+  background-color: #dc3545; /* Merah standar untuk tombol danger */
+  color: #fff;
+}
+
+.table .btn-danger:hover {
+  background-color: #b02a37; /* Merah lebih gelap saat hover */
+}
+
+/* Custom table styles */
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd; /* Optional: add borders for better clarity */
+}
+
+/* General styles for the matrix-tabel */
+.matrix-tabel {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333; /* Text color */
+}
+
+/* Header row styles for matrix-tabel */
+.matrix-tabel thead tr {
+  background-color: #fef4c1; /* Soft yellow for header */
+  border-bottom: 2px solid #ddd; /* Soft border for header */
+}
+
+.matrix-tabel th {
+  padding: 12px 15px;
+  text-align: center;
+  font-weight: bold;
+  color: #555; /* Dark gray text for readability */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Styles for data rows in matrix-tabel */
+.matrix-tabel tbody tr {
+  text-align: center;
+}
+
+/* Alternate row colors for better readability */
+.matrix-tabel tbody tr:nth-child(odd) {
+  background-color: #fafafa; /* Very light gray for odd rows */
+}
+
+.matrix-tabel tbody tr:nth-child(even) {
+  background-color: #fff; /* White for even rows */
+}
+
+/* Hover effect for rows */
+.matrix-tabel tbody tr:hover {
+  background-color: #f1f1f1; /* Light gray on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Style for the first column (Nama Desa Wisata) */
+.matrix-tabel td:first-child,
+.matrix-tabel th:first-child {
+  text-align: left; /* Align the first column to the left */
+  font-weight: bold;
+}
+
+/* Style for subscript in Nama Desa Wisata */
+.matrix-tabel td sub {
+  font-size: 0.8em;
+  vertical-align: super;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .matrix-tabel th,
+  .matrix-tabel td {
+    padding: 8px 10px; /* Smaller padding on mobile */
+  }
+  
+  .matrix-tabel thead {
+    display: none; /* Hide header on small screens */
+  }
+  
+  .matrix-tabel tbody tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .matrix-tabel tbody td {
+    display: block;
+    text-align: right;
+    position: relative;
+  }
+
+  .matrix-tabel tbody td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+  }
+}
+
+
+/* Tombol */
+.btn_custom {
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn_custom:hover {
+  background-color: #218838;
+}
+
+.btn_shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .table {
+    font-size: 14px;
+  }
+
+  .btn_custom {
+    width: 100%;
+    padding: 10px;
+  }
+}
+
+.table-description {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-top: 2px;
+}
+
+.table-container {
+  padding-top: 30px; /* Padding atas */
+  padding-bottom: 50px; /* Padding bawah */
+}
+
